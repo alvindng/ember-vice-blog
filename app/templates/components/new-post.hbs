@@ -3,7 +3,7 @@
     <label for="title">Title</label>
     {{input value=title id="title"}}
   </div>
-  
+
   <div class="form-group">
     <label for="body">Body</label>
     {{textarea cols="80" rows="6" value=body id="body" class="form-control"}}
@@ -23,6 +23,5 @@
     <label for="tags">Tags</label>
     {{input value=tags id="tags" class="form-control"}}
   </div>
-  <button {{action 'save'}}></button>
-
+  <button {{action 'save'}}>Save</button>
 </form>

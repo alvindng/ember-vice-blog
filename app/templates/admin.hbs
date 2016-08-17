@@ -1,1 +1,22 @@
-{{new-post save='save'}}
+<h1 class="text-center">Admin Panel</h1>
+
+<div class="row">
+  <div class="col-sm-6">
+    <h2>Add Post</h2>
+    {{new-post save="save"}}
+  </div>
+  <div class="col-sm-6">
+    <h2>Update Articles</h2>
+    <div class="row">
+      {{#each model as |post|}}
+        <div class="col-sm-12">
+          <p>
+            {{post.title}}
+            {{update-post post=post update="update"}}
+            <button class="inline-button pull-right" {{action 'delete' post}}>Delete</button>
+          </p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

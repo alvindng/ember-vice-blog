@@ -1,0 +1,34 @@
+{{#if updatePost}}
+  <div>
+    <form>
+      <div class="">
+        <label for="title">Title</label>
+        {{input value=title id="title1" placeholder=post.title class="form-control"}}
+      </div>
+
+      <div class="">
+        <label for="body">Body</label>
+        {{textarea cols='80' rows='6' value=body id="body1" placeholder=post.body class="form-control"}}
+      </div>
+
+      <div class="">
+        <label for="category">Category</label>
+        {{input value=category id="category1" placeholder=post.category class="form-control"}}
+      </div>
+
+      <div class="">
+        <label for="date">Date</label>
+        {{input value=date id="date1" placeholder=post.date class="form-control"}}
+      </div>
+
+      <div class="">
+        <label for="tags">Tags</label>
+        {{input value=tags id="tags1" placeholder=post.tags class="form-control"}}
+      </div>
+
+      <button {{action 'update' post}}>Update Post</button>
+    </form>
+  </div>
+{{else}}
+  <button class="btn btn-warning" {{action "updatePostFormShow"}}>Update</button>
+{{/if}}
