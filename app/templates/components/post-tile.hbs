@@ -1,7 +1,6 @@
 <div class="col-sm-8">
-  <h3>{{post.title}}</h3>
-  <p><span class="pull-right">{{post.date}}</span></p>
-  <p>{{post.category}}</p>
-  <p>{{post.tags}}</p>
-  <p>{{post.body}}</p>
+  <h3>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</h3>
+  <p>By: {{post.author}}<span class="pull-right">On: {{post.date}}</span></p>
+  <p>Category: {{post.category}}</p>
+  <p>Tags: {{post.tags}}</p>
 </div>

@@ -10,6 +10,7 @@ export default Ember.Component.extend({
       var params = {
         title: this.get("title"),
         body: this.get("body"),
+        author: this.get("author"),
         category: this.get("category"),
         date: this.get("date"),
         tags: this.get("tags")
